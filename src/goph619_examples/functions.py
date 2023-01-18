@@ -8,12 +8,9 @@ def exp(x):
     s = 1.
     while err > tol:
         k += 1
-        print(k)
         fact_k *= k     # fact_k = fact_k * k
-        print(fact_k)
         t = (x ** k) / fact_k
         s += t
-        print(s)
         err = abs(t / s)
     return s
 
