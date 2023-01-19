@@ -8,13 +8,23 @@ from goph619_examples.functions import (
 
 def main():
 
-    x = np.linspace(-5., 5., 10)
-    y = np.zeros(x.shape)
-    for k, xk in enumerate(x):
-        y[k] = exp(xk)
+    # generate array of x values
+    x = np.linspace(-5., 5., 50)
 
-    plt.plot(x, y)
+    # compute exp(x) using our code and using numpy.exp()
+    y = exp(x)
+    ynp = np.exp(x)
 
+    # plot the two sets of results
+    plt.plot(x, y, 'or')
+    plt.plot(x, ynp, '--k')
+
+    # add some labels and a legend to the plot
+    plt.xlabel('x')
+    plt.ylabel('y = exp(x)')
+    plt.legend(['goph619_examples', 'numpy'])
+
+    # show the plot
     plt.show()
 
 
