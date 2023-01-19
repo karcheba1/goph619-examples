@@ -3,4 +3,4 @@
 *Semester:* Winter 2023 \
 *Instructor:* B. Karchewski
 
-Code examples from the labs for this course.
+Code examples from the labs for GOPH 619.
