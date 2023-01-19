@@ -13,8 +13,3 @@ def exp(x):
         s += t
         err = abs(t / s)
     return s
-
-
-if __name__ == '__main__':
-    print(f'exp(0): {exp(0)}')
-    print(f'exp(1): {exp(1)}')
