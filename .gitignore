@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# CUSTOM IGNORES, NOT PART OF Python TEMPLATE
+
+# vim temporary files
+*.swp
