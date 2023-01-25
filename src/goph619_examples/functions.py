@@ -35,3 +35,16 @@ def exp(x):
         err = abs(t / s)    # compute approximate relative error
     # return block
     return s
+
+
+def cos(x):
+    """Compute the value of cosine.
+
+    Parameters
+    ----------
+
+    Returns
+    -------
+
+    """
+    return 0.
