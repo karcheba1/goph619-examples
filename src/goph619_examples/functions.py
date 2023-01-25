@@ -1,4 +1,6 @@
 """A module for implementing functions with series solutions in Python.
+
+Contains functions: exp()
 """
 
 import numpy as np
