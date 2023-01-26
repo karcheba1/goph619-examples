@@ -96,9 +96,7 @@ def sin(x):
     k = 0
     fact_2kp1 = 1
     sign = 1
-    x_2 = x ** 2
-    x_2kp1 = np.array(x)
-    s = x_2kp1
+    s = x
     err = np.ones_like(x)
     tol = 1.e-16
     # iteration block
@@ -107,7 +105,7 @@ def sin(x):
         two_k = 2 * k
         fact_2kp1 *= two_k * (two_k + 1)  # update factorial
         sign *= -1                      # update sign, (-1) ** k
-        x_2kp1 *= x_2
+        x_2kp1 = x ** (two_k + 1)
         t = sign * x_2kp1 / fact_2kp1       # compute next term
         s = s + t           # increment series result
         err = abs(t / s)    # compute approximate relative error
