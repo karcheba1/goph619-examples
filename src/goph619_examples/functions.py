@@ -19,7 +19,7 @@ def exp(x):
     numpy.ndarray
         The result of the exponential function.
     """
-    x = np.array(x)  # try to convert x to a numpy.array to check array_like
+    x = np.array(x, dtype=float)  # try to convert x to a numpy.array to check array_like
     # initialization block
     k = 0
     fact_k = 1
@@ -36,7 +36,7 @@ def exp(x):
         s = s + t           # increment series result
         err = abs(t / s)    # compute approximate relative error
     # return block
-    return s
+    return float(s) if s.shape == () else np.array(s, dtype=float)
 
 
 def cos(x):
