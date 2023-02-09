@@ -41,5 +41,20 @@ class TestExpString(unittest.TestCase):
             exp('zero')
 
 
+class TestExpTypes(unittest.TestCase):
+
+    def test_int_input(self):
+        self.assertIsInstance(exp(1), float)
+
+    def test_float_input(self):
+        self.assertIsInstance(exp(1.0), float)
+
+    def test_str_input(self):
+        self.assertIsInstance(exp('1.0'), float)
+
+    def test_array_input(self):
+        self.assertIsInstance(exp([1, 2]), np.ndarray)
+
+
 if __name__ == '__main__':
     unittest.main()
