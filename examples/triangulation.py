@@ -6,8 +6,6 @@ from scipy.spatial import Delaunay
 def main():
     nx = 10
     ny = 15
-    xmax = 1.0
-    ymax = 1.0
     full_rand = False
 
     if full_rand:
@@ -15,7 +13,9 @@ def main():
         Yg = np.random.random((ny, nx))
 
     else:
+        xmax = 1.0
         xg = np.linspace(0, xmax, nx)
+        ymax = 1.0
         yg = np.linspace(0, ymax, ny)
 
         Xg, Yg = np.meshgrid(xg, yg)
